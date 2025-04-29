@@ -123,7 +123,7 @@ $edit.addEventListener('click',e=>{
 // 추가 엔터와 클릭 둘다 가능하게
 function doubleInput() {
     const addValue = Number($valueInput.value);
-    if(!isNaN(addValue) && addValue !==0 && addValue =< 100){
+    if(!isNaN(addValue) && addValue !==0 && addValue < 101){
         data.push(addValue);
         render();
         renderJson();
