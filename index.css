@@ -1,0 +1,155 @@
+#content {margin: 0; padding: 0;}
+#content .name {text-align: end;
+margin-bottom: 50px;
+padding-bottom: 10px;
+padding-right: 100px;
+font-size: 25px;
+border-bottom: 1px solid #000;
+}
+
+
+/* con1 그래프 */
+
+.con1 {
+    width: 100%;
+    max-width: 450px;
+     border-bottom: 1px solid #000; margin-bottom: 50px;}
+
+.con1 .graph {
+    position: relative;
+    height: 300px;
+    background: #f5f5f5;
+    margin: 50px;
+    padding: 30px 30px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+}
+
+.con1 .graph .bars {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+.con1 .graph .bars .bar {
+    background: #999;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    margin-bottom: 10px;
+}
+
+.con1 .graph .yLine {
+    position: absolute; top: 20px; left: 30px;
+    width: 1px;
+    height: calc(100% - 70px);
+    background: #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.con1 .graph .yLine p {
+    margin: 0;
+    text-align: right;
+    transform: translateX(-30px);
+}
+.con1 .graph .yLine .zero {
+    margin: 0;
+    text-align: right;
+    transform: translateX(-15px);
+}
+
+
+.con1 .graph .xLine {
+    position: absolute; bottom: 50px; left: 30px;
+    width: 100%;
+    height: 1px;
+    background: #000;
+}
+.con1 .graph .barsValue {
+    display: flex;
+    align-items: flex-end;
+    gap: 50px;
+    z-index: 1;
+}
+
+.con1 .graph .barsValue .barValue {
+    text-align: center;
+    width: 100%;
+}
+
+/* con2 테이블 */
+.con2 {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    border-bottom: 1px solid #000; margin-bottom: 50px;
+}
+.con2 .tableValue {
+    margin: 50px;
+}
+.con2 button {background: none; border:none;
+    color: #999; 
+    font-weight: bold; cursor: pointer;}
+.con2 .edit {position: absolute; right: 0; 
+    font-size: 20px;  border: 2px solid #000;
+margin-top: 5px;
+color: #000;
+}
+.con2 .edit:hover { background: #000; color: #fff;}
+
+table {width:400px;}
+table thead {}
+table thead tr {border: 1px solid #fff; background: #999;}
+table td:nth-child(2), th:nth-child(2) {
+    width: 200px;
+}
+table thead tr th {border: 1px solid #fff;}
+
+
+table tbody tr {}
+table tbody tr td {
+    text-align: center;
+    border: 1px solid #fff;
+    height: 25px;
+}
+
+/* con3 값 추가 */
+.con3 {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
+.con3 .inputAll {margin: 50px 0 50px 50px;}
+.con3 input {height: 25px;}
+.con3 .inputID{width: 50px;}
+.con3 .valueInput{width: 280px;}
+.con3 .addBtn {
+    height: 30px;
+    font-size: 15px; font-weight: bold;  border: 2px solid #000;
+    margin-top: 5px;
+    color: #000; background: #fff; cursor: pointer;}
+.con3 .addBtn:hover { background: #000; color: #fff;}
+
+/* con4 값 고급 편집 */
+.con4 { width: 100%; max-width: 450px; margin-bottom: 100px;}
+.con4 .main {background: #e5e5e5;
+position: relative; padding-left: 40px;}
+.con4 .main button{position: absolute; right: 0;
+    font-size: 20px; font-weight: bold;  border: 2px solid #000;
+    margin-top: 5px;
+    color: #000; background: #fff; cursor: pointer;
+}
+.con4 .main .jsonBtn:hover {background: #000; color: #fff;}
+
+
