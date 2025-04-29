@@ -1,4 +1,4 @@
-"useStrict"
+"use strict"
 
 const $bar = document.querySelectorAll('.bar');
 const $bars = document.querySelector('.bars');
@@ -21,7 +21,6 @@ function render(){
     $barsValue.innerHTML='';
     $tbody.innerHTML='';
 
-    // 막대 너비 + 갭까지 고려한 전체 길이
     const barWidth = 20;
     const gap = 50;
     const totalWidth = barWidth * data.length + gap * (data.length - 1);
@@ -60,7 +59,7 @@ function render(){
         }
         $tbody.append(newTr)
 
-        
+        // 삭제
         tableBtn.addEventListener('click',e=>{
             if($edit.textContent ==="Apply"){
 
@@ -81,12 +80,10 @@ function render(){
             })
         }
         })
-       
-        
-        
     });
 }
 
+// 수정버튼
 $edit.addEventListener('click',e=>{
     if(e.target.textContent === "Edit"){
         e.target.textContent = "Apply"
@@ -123,6 +120,7 @@ $edit.addEventListener('click',e=>{
     }
 })
 
+// 추가 엔터와 클릭 둘다 가능하게
 function doubleInput() {
     const addValue = Number($valueInput.value);
     if(!isNaN(addValue) && addValue !==0 && addValue < 100){
@@ -137,7 +135,7 @@ function doubleInput() {
         $valueInput.focus();
     }
 }
-// add 클릭이나 엔터 둘다 입력받기위해
+
 $addBtn.addEventListener('click',doubleInput)
 $valueInput.addEventListener('keydown',e=>{
     if(e.key === 'Enter'){
@@ -183,10 +181,7 @@ $jsonBtn.addEventListener('click',e=>{
     }
 })
 
-
-
 renderJson();
-
 render();
 
 
