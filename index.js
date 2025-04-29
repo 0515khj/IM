@@ -125,7 +125,7 @@ $edit.addEventListener('click',e=>{
 
 function doubleInput() {
     const addValue = Number($valueInput.value);
-    if(!isNaN(addValue) && addValue !==0 && addValue < 100){
+    if(!isNaN(addValue) && addValue !==0 && addValue < 101){
         data.push(addValue);
         render();
         renderJson();
